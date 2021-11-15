@@ -1,12 +1,12 @@
 FROM node:latest
 
-WORKDIR /usr/app
+WORKDIR /usr/app/api
 
-COPY package.json .
+COPY package*.json ./
 
-RUN npm i 
+RUN npm install
 
 COPY . . 
 
-CMD["npm","start"]
+CMD ["npm","run"]
 
